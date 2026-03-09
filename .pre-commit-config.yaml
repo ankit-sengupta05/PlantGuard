@@ -8,6 +8,13 @@
     - id: check-yaml
     - id: check-json
 
+- repo: https://github.com/pycqa/flake8
+  rev: 7.0.0
+  hooks:
+    - id: flake8
+      additional_dependencies: [flake8]
+      args: ['--max-line-length=100']
+
 - repo: https://github.com/codespell-project/codespell
   rev: v2.2.2
   hooks:
@@ -16,7 +23,7 @@
 - repo: local
   hooks:
     - id: mask-env
-      name: Mask secrets in .env and other files
+      name: Mask secrets in all files
       entry: python scripts/mask_keys.py
       language: system
       types: [text]

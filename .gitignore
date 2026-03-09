@@ -7,7 +7,7 @@ __pycache__/
 venv/
 env/
 
-# Node (if any)
+# Node
 node_modules/
 
 # IDE/editor
