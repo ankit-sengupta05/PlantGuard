@@ -1,0 +1,66 @@
+# =====================
+# Python
+# =====================
+# Ignore all Python cache directories anywhere
+**/__pycache__/
+**/*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+ENV/
+*.pyvenv.cfg
+
+# Environment variables / secrets
+.env
+*.env.*        # .env.local, .env.production, etc.
+*.key
+*.pem
+*.crt
+*.p12
+*.pfx
+*.jks
+*.secret
+config/
+secrets/
+*.json         # optional if you store credentials in JSON
+
+# =====================
+# Node.js
+# =====================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =====================
+# Logs
+# =====================
+*.log
+logs/
+*.sqlite3
+
+# =====================
+# System / OS files
+# =====================
+.DS_Store
+Thumbs.db
+
+# =====================
+# IDE / editor
+# =====================
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# =====================
+# Build / packaging
+# =====================
+dist/
+build/
+*.egg-info/
+*.egg
