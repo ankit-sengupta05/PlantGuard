@@ -1,0 +1,28 @@
+﻿name: CI
+
+on:
+  push:
+    branches: [ 'main', 'dev' ]
+  pull_request:
+
+jobs:
+  lint_and_check:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # Install Python
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install pre-commit and flake8
+        run: |
+          python -m pip install --upgrade pip
+          pip install pre-commit flake8
+
+      # Run pre-commit hooks on all files (any folder, any language)
+      - name: Run pre-commit hooks
+        run: pre-commit run --all-files
